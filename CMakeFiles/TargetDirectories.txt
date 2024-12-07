@@ -1,0 +1,3 @@
+/Users/stanwu/Desktop/GeneticAlgorithm-master/CMakeFiles/GeneticAlgorithm.dir
+/Users/stanwu/Desktop/GeneticAlgorithm-master/CMakeFiles/edit_cache.dir
+/Users/stanwu/Desktop/GeneticAlgorithm-master/CMakeFiles/rebuild_cache.dir
