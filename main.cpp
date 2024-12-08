@@ -58,6 +58,9 @@ int main(int argc, char *argv[]) {
     int NUM_THREADS = atoi(argv[1]);
 
     GeneticAlgorithm geneticAlgorithm;
+
+    // geneticAlgorithm is the superclass that runs the computation method
+    // we parallelized code in Population.cpp
     geneticAlgorithm.run(NUM_THREADS);
 
     return 0;

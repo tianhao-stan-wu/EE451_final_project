@@ -119,7 +119,7 @@ void Population::printChromos() {
     std::cout << chromosomes.size()<< std::endl;
 }
 
-// parallel processing for p.process()
+// parallel processing for p.process() using pthreads
 // Mutex for protecting shared variable totalFitness
 pthread_mutex_t fitnessMutex;
 
@@ -130,6 +130,7 @@ struct Process_Data {
     double totalFitness;                // Accumulated fitness for this thread
 };
 
+// define thread function here
 void* processChromosomes(void* arg) {
     Process_Data* data = (Process_Data*)arg;
     double localFitness = 0;
@@ -149,6 +150,9 @@ void* processChromosomes(void* arg) {
     return nullptr;
 }
 
+
+// parallelized code for process a population
+// totalFitness is a shared variable, we implement data parallelism across each individual in a population
 void Population::process(int numThreads) {
 
     double totalFitness = 0;
@@ -200,6 +204,7 @@ json Population::toJson() {
 
 
 // parallelize diversity calculation
+// totalSum is the shared variable here.
 
 pthread_mutex_t mutex_div;
 

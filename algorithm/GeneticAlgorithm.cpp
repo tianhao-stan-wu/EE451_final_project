@@ -3,6 +3,9 @@
 #include "GeneticAlgorithm.h"
 #include <time.h>
 
+
+// this is the main function that runs
+// we parallelize population process and calDiversity in Population.cpp
 void GeneticAlgorithm::run(int numThreads) {
 
     struct timespec start, stop; 
